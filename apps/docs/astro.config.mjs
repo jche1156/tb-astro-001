@@ -3,6 +3,11 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	vite: {
+		ssr: {
+		  noExternal: ['path-to-regexp'],
+		},
+	  },
 	integrations: [
 		starlight({
 			title: 'Docs',
